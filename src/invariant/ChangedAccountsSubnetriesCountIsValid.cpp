@@ -30,7 +30,7 @@ getAccount(LedgerEntry const& entry)
     case DATA:
         return d.data().accountID;
     default:
-        assert(false);
+        abort();
     }
 }
 
@@ -48,7 +48,7 @@ getAccount(LedgerKey const& key)
     case DATA:
         return key.data().accountID;
     default:
-        assert(false);
+        abort();
     }
 }
 
@@ -118,17 +118,18 @@ ChangedAccountsSubnetriesCountIsValid::check(LedgerDelta const& delta) const
         if (subentries.inAccountsTable != subentries.calculated)
         {
             return fmt::format("account {} subentries count mismatch: "
-                                "{} in accounts table vs {} calculated",
-                                KeyUtils::toStrKey(account),
-                                subentries.inAccountsTable,
-                                subentries.calculated);
+                               "{} in accounts table vs {} calculated",
+                               KeyUtils::toStrKey(account),
+                               subentries.inAccountsTable,
+                               subentries.calculated);
         }
     }
 
     for (auto const& account : getDeletedAccounts(delta))
     {
         auto subentries = numberOfSubentries(account, mDb);
-        if (subentries.inAccountsTable != subentries.calculated || subentries.inAccountsTable != 0)
+        if (subentries.inAccountsTable != subentries.calculated ||
+            subentries.inAccountsTable != 0)
         {
             return fmt::format(
                 "non-exsiting account {} subentries count mismatch: {} "

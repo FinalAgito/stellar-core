@@ -462,7 +462,7 @@ TEST_CASE("Accounts vs. latency", "[scalability][hide]")
     auto& lg = app.getLoadGenerator();
     auto& txtime = app.getMetrics().NewTimer({"transaction", "op", "apply"});
 
-    size_t step = 5000;
+    int step = 5000;
     size_t total = 10000000;
 
     closeLedger(app);
@@ -525,7 +525,6 @@ netTopologyTest(
         auto nodes = sim->getNodes();
         assert(!nodes.empty());
         auto& app = *nodes[0];
-        auto& lg = app.getLoadGenerator();
         closeLedger(app);
 
         generateAccountsAndCloseLedger(app, 50);
