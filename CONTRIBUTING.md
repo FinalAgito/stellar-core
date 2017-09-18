@@ -1,4 +1,4 @@
-#How to contribute
+# How to contribute
 
 We're striving to keep master's history with minimal merge bubbles. To achieve this, we're asking PRs to be submitted rebased on top of master.
 
