@@ -741,6 +741,21 @@
     <ClCompile Include="..\..\src\ledger\SyncingLedgerChainTests.cpp">
       <Filter>ledger\tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\transactions\AllowTrustTests.cpp">
+      <Filter>transactions\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\transactions\ExchangeTests.cpp">
+      <Filter>transactions\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\transactions\PathPaymentTests.cpp">
+      <Filter>transactions\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\transactions\TxResultsTests.cpp">
+      <Filter>transactions\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\test\TestMarket.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ledger\LedgerManager.h">
@@ -1307,6 +1322,12 @@
     <ClInclude Include="..\..\src\ledger\SyncingLedgerChain.h">
       <Filter>ledger</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\test\DotReporter.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\test\TestMarket.h">
+      <Filter>test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\AUTHORS" />
@@ -1396,6 +1417,9 @@
     <None Include="..\..\docs\software\testnet.md">
       <Filter>docs\software</Filter>
     </None>
+    <None Include="..\..\CONTRIBUTING.md" />
+    <None Include="..\..\README" />
+    <None Include="..\..\travis-build.sh" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\xdr\Stellar-ledger.x">
@@ -1418,6 +1442,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\INSTALL-Windows.txt" />
+    <Text Include="..\..\INSTALL-Windows.md" />
+    <Text Include="..\..\LICENSE-APACHE.txt" />
   </ItemGroup>
 </Project>
