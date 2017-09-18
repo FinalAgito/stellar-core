@@ -3,8 +3,8 @@
 // of this distribution or at http://www.apache.org/licenses/LICENSE-2.0
 
 #include "Invariants.h"
-#include "invariant/InvariantDoesNotHold.h"
 #include "invariant/Invariant.h"
+#include "invariant/InvariantDoesNotHold.h"
 #include "ledger/LedgerDelta.h"
 #include "lib/util/format.h"
 #include "util/Logging.h"

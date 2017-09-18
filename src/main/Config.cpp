@@ -618,12 +618,14 @@ Config::load(std::string const& filename)
                 INVARIANT_CHECK_ACCOUNT_SUBENTRY_COUNT =
                     item.second->as<bool>()->value();
             }
-            else if (item.first == "INVARIANT_CHECK_CACHE_CONSISTENT_WITH_DATABASE")
+            else if (item.first ==
+                     "INVARIANT_CHECK_CACHE_CONSISTENT_WITH_DATABASE")
             {
                 if (!item.second->as<bool>())
                 {
-                    throw std::invalid_argument(
-                        "invalid INVARIANT_CHECK_CACHE_CONSISTENT_WITH_DATABASE");
+                    throw std::invalid_argument("invalid "
+                                                "INVARIANT_CHECK_CACHE_"
+                                                "CONSISTENT_WITH_DATABASE");
                 }
                 INVARIANT_CHECK_CACHE_CONSISTENT_WITH_DATABASE =
                     item.second->as<bool>()->value();

@@ -8,5 +8,4 @@ namespace stellar
 {
 
 Invariant::~Invariant() = default;
-
 }

@@ -29,7 +29,7 @@ std::string
 TotalCoinsEqualsBalancesPlusFeePool::check(LedgerDelta const& delta) const
 {
     auto& lh = delta.getHeader();
-    if (lh.ledgerVersion < 7)   // due to bugs in previous versions
+    if (lh.ledgerVersion < 7) // due to bugs in previous versions
     {
         return {};
     }

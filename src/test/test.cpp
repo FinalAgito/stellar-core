@@ -6,9 +6,9 @@
 
 #include "util/asio.h"
 
-#include "test.h"
 #include "StellarCoreVersion.h"
 #include "main/Config.h"
+#include "test.h"
 #include "test/TestUtils.h"
 #include "util/Logging.h"
 #include "util/TmpDir.h"
@@ -33,8 +33,8 @@ namespace Catch
 {
 
 DotReporter::~DotReporter()
-{}
-
+{
+}
 }
 
 namespace stellar

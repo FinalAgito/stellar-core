@@ -10,14 +10,12 @@
 namespace stellar
 {
 
-CacheIsConsistentWithDatabase::CacheIsConsistentWithDatabase(
-    Database& db)
+CacheIsConsistentWithDatabase::CacheIsConsistentWithDatabase(Database& db)
     : mDb{db}
 {
 }
 
-CacheIsConsistentWithDatabase::
-    ~CacheIsConsistentWithDatabase() = default;
+CacheIsConsistentWithDatabase::~CacheIsConsistentWithDatabase() = default;
 
 std::string
 CacheIsConsistentWithDatabase::getName() const
@@ -41,8 +39,9 @@ CacheIsConsistentWithDatabase::check(LedgerDelta const& delta) const
     {
         if (EntryFrame::exists(mDb, d))
         {
-            return fmt::format("Inconsistent state; entry should not exist in database: {}",
-                                xdr::xdr_to_string(d));
+            return fmt::format(
+                "Inconsistent state; entry should not exist in database: {}",
+                xdr::xdr_to_string(d));
         }
     }
 

@@ -286,8 +286,8 @@ ApplicationImpl::start()
             auto npub = mHistoryManager->publishQueuedHistory();
             if (npub != 0)
             {
-                CLOG(INFO, "Ledger")
-                    << "Restarted publishing " << npub << " queued snapshots";
+                CLOG(INFO, "Ledger") << "Restarted publishing " << npub
+                                     << " queued snapshots";
             }
             if (mConfig.FORCE_SCP)
             {
